@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="yandex-verification" content="">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'loginsys/img/logo.jpg' %}" rel="icon">
+    <!-- Description -->
+    <meta name="description"
+          content="Узнайте свою совместимость с сотрудниками компании по натальной карте и получите персональные рекомендации!">
+    <meta name="keywords"
+          content="mojarung, натальная карта, астрология, карты таро, космограмма, naimix, hr, it, трудоустройство, гадание, расклады, резюме, gpt, yandexgpt">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'astro_check/css/nullstyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'loginsys/css/loginsys.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'astro_check/css/astro_check.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'astro_check/css/generate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'astro_check/css/team.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'astro_check/css/errors.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'astro_check/css/main.css' %}">
+    <!-- Title -->
+    <title>{{ title }}</title>
+</head>
+<body style="background: url('{% static 'loginsys/img/background.png' %}');object-fit: cover">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) {
+                return;
+            }
+        }
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(0, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+    });
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/97095430" style="position:absolute; left:-9999px;" alt=""></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+{% if request.resolver_match.url_name != 'main' %}
+    <navbar class="navbar">
+        <div class="navbar__content">
+            <div class="navbar__component navbar__start">
+                <a href="{% url 'main' %}">
+                    <img src="{% static 'loginsys/img/logo.jpg' %}" alt="logo" class="navbar__logo">
+                </a>
+            </div>
+            <div class="navbar__component">
+                <a href="{% url 'main' %}" class="navbar__title">AstroHR</a>
+            </div>
+            <div class="navbar__component navbar__profile">
+                {% if user.is_authenticated %}
+                    <div class="navbar__user">@{{ user.username }}</div>
+                    <a class="navbar__btn" href="{% url 'logout' %}">Выйти</a>
+                {% else %}
+                    <a class="navbar__btn" href="{% url 'logout' %}">Войти</a>
+                {% endif %}
+            </div>
+        </div>
+    </navbar>
+{% endif %}
+{% block content %}
+{% endblock %}
+</body>
+</html>

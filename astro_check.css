@@ -1,0 +1,219 @@
+body {
+    font-family: "Commissioner", "Arial", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90dvh;
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: #0f6666;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.navbar__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar__component {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar__title {
+    font-weight: 700;
+    color: white;
+    font-size: 25px;
+}
+
+.navbar__profile {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.navbar__btn {
+    padding: 12px 20px;
+    background-color: #f25430;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all .5s;
+}
+
+.navbar__btn:hover {
+    background-color: #ff9928;
+}
+
+.navbar__user {
+    color: white;
+}
+
+.navbar__start {
+    text-align: start;
+    height: 100%;
+    padding: 7px;
+}
+
+.navbar__start img {
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.astrocheck {
+    background-color: white;
+    padding: 30px 65px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.astrocheck__heading {
+    font-size: 30px;
+    font-weight: 700;
+    color: #f25430;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.astrocheck-input__label {
+    color: black;
+    margin-bottom: 8px;
+}
+
+.astrocheck-input__input input {
+    border-radius: 15px;
+    padding: 10px 20px;
+    min-width: 250px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.astrocheck-input {
+    margin-bottom: 20px;
+}
+
+.astrocheck-input__input input {
+    border: #ff9928 solid 2px;
+}
+
+.astrocheck-input__input select {
+    padding: 10px 20px;
+    background-color: #0f6666;
+    color: white;
+    border-radius: 15px;
+}
+
+.astrocheck__btn {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #f25430;
+    color: white;
+    font-size: 18px;
+    transition: all .5s;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.astrocheck__btn:hover {
+    background-color: #ff9928;
+}
+
+.astrocheck__result {
+    font-size: 30px;
+    font-weight: 700;
+    color: #f25430;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.astrocheck__description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.astrocheck__block {
+    margin-bottom: 30px;
+}
+
+.astrocheck__title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.astrocheck__value {
+    color: #0f6666;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.astrocheck__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox_field {
+    display: flex;
+    gap: 7px;
+}
+
+.astrocheck__check {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.astrocheck__checkbtn {
+    color: white;
+    padding: 15px 50px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.astrocheck__btn_confirm {
+    background-color: #0f6666;
+    transition: all .5s;
+}
+
+.astrocheck__checkbtn:hover {
+    background-color: #ff9928;
+}
+
+.astrocheck__btn_decline {
+    background-color: #f25430;
+    transition: all .5s;
+}
+
+.astrocheck__text {
+    line-height: 20px;
+}
